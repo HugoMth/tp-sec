@@ -7,8 +7,7 @@ jobs:
       matrix:
         groups:
           - name: fast
-            specs: |
-              cypress/tests/**/*.spec.js"
+            specs: "cypress/tests/**/*.spec.js"
     steps:
       - name: Checkout
         uses: actions/checkout@v6
@@ -19,5 +18,4 @@ jobs:
           build: npm run build
           start: npm run dev
           wait-on: http://localhost:3000 
-          spec: |
-            ${{ matrix.groups.specs }}
+          spec: ${{ matrix.groups.specs }}
