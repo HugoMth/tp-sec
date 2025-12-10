@@ -11,7 +11,8 @@ jobs:
               cypress/tests/suite1.spec.js
               cypress/tests/suite2.spec.js
           - name: slow
-            specs: cypress/tests/suite3.spec.js
+            specs: | 
+              cypress/tests/suite3.spec.js
     steps:
       - name: Checkout
         uses: actions/checkout@v6
